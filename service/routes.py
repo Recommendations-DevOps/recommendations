@@ -87,7 +87,24 @@ def init_db():
 #     app.logger.info("Recommendations with ID [%s] created.", rec.id)
 #     return make_response(
 #         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
-#     )
+#     
+######################################################################
+# DELETE A RECOMMENDATIONS
+######################################################################
+@app.route("/recommendations/<int:recommendations_id>", methods=["DELETE"])
+def delete_recommendations(recommendations_id):
+    """
+    Delete a Recommendations
+    This endpoint will delete a Recommendations based the id specified in the path
+    """
+    app.logger.info("Request to delete Recommendations with id: %s", recommendations_id)
+    recommendations = RecommendationModel.find(recommendations_id)
+    if receommendations:
+        recommendations.delete()
+
+    app.logger.info("Recommendations with ID [%s] delete complete.", recommendations_id)
+    return make_response("", status.HTTP_204_NO_CONTENT)
+
 
 ######################################################################
 #  U T I L I T Y   F U N C T I O N S
