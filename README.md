@@ -7,7 +7,7 @@
 ## Available calls and inputs
 ```create_recs```  """Creates a Recommendation - This endpoint will create a Recommendation based the data in the body that is posted"""
 
-```list_recs``` """ Lists all Recommendations - This endpoint will list all recommendations in the database."""
+```list_recs``` """ Lists all Recommendations - This  endpoint will list all recommendations in the database."""
 
 ```def check_content_type(media_type):```     """Checks that the media type is correct"""
 
