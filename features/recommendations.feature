@@ -66,7 +66,8 @@ Scenario: Update a recommendation
     And I press the "Clear" button
     And I paste the "Id" field
     And I press the "Retrieve" button
-    Then I should see "lamp" in the "name" field
+    Then I should see the message "Success"
+    And I should see "lamp" in the "name" field
     When I press the "Clear" button
     And I press the "Search" button
     Then I should see "lamp" in the results
@@ -90,7 +91,7 @@ Scenario: Activate a Recommendation
     Then I should see "false" in the results
     And I should not see "true" in the results
     When I press the "Activate" button
-    Then I should see "True" in the "Activated" dropdown
+    Then I should see the message "Recommendation has been Activated!"
     When I set the "name" to "jelly"
     And I press the "Search" button
     Then I should see "true" in the results
