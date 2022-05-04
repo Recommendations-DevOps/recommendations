@@ -293,6 +293,7 @@ $(function () {
         let activated = $("#recommendation_activated").val() == "false";
 
         let data = {
+            "recommendation_id" : id,
             "name": name,
             "original_product_id": original_product_id,
             "recommendation_product_id": recommendation_product_id,
@@ -312,6 +313,7 @@ $(function () {
 
         ajax.done(function(res){
             update_form_data(res)
+            flash_message("Recommendation has been Activated!")
         });
 
         ajax.fail(function(res){
