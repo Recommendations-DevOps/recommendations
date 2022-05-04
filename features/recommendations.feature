@@ -70,6 +70,7 @@ Scenario: Update a recommendation
     And I should see "lamp" in the "name" field
     When I press the "Clear" button
     And I press the "Search" button
+    Then I should see the message "Success"
     Then I should see "lamp" in the results
     Then I should not see "desk" in the results
 
