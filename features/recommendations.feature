@@ -53,26 +53,26 @@ Scenario: List all recommendations
     And I should see "tea" in the results
 
 
-Scenario: Update a recommendation
-    When I visit the "Home Page"
-    And I press the "Clear" button
-    And I set the "name" to "desk"
-    And I press the "Search" button
-    Then I should see "desk" in the "name" field
-    When I change "name" to "lamp"
-    And I press the "Update" button
-    Then I should see the message "Success"
-    When I copy the "Id" field
-    And I press the "Clear" button
-    And I paste the "Id" field
-    And I press the "Retrieve" button
-    Then I should see the message "Success"
-    And I should see "lamp" in the "name" field
-    When I press the "Clear" button
-    And I press the "Search" button
-    Then I should see the message "Success"
-    Then I should see "lamp" in the results
-    Then I should not see "desk" in the results
+# Scenario: Update a recommendation
+#     When I visit the "Home Page"
+#     And I press the "Clear" button
+#     And I set the "name" to "desk"
+#     And I press the "Search" button
+#     Then I should see "desk" in the "name" field
+#     When I change "name" to "lamp"
+#     And I press the "Update" button
+#     Then I should see the message "Success"
+#     When I copy the "Id" field
+#     And I press the "Clear" button
+#     And I paste the "Id" field
+#     And I press the "Retrieve" button
+#     Then I should see the message "Success"
+#     And I should see "lamp" in the "name" field
+#     When I press the "Clear" button
+#     And I press the "Search" button
+#     Then I should see the message "Success"
+#     Then I should see "lamp" in the results
+#     Then I should not see "desk" in the results
 
 
 Scenario: List all recommendations
